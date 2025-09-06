@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Student Portfolio — vinotha</title>
+
+  <meta name="description" content="A modern student digital portfolio with projects, skills, and contact form." />
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <main>
+
+    <header>
+
+      <div class="brand">
+
+        <div class="avatar" aria-hidden>BM</div>
+
+        <div>
+
+          <h1 id="siteName">vinotha</h1>
+
+          <p class="lead">Student • Web Developer</p>
+
+        </div>
+
+      </div>
+
+      <div style="display:flex;gap:8px;align-items:center">
+
+        <button id="themeToggle" class="btn btn-ghost" aria-pressed="false">Toggle Theme</button>
+
+      </div>
+
+    </header>
+
+    <section class="hero">
+
+      <div class="intro">
+
+        <h2>Hello — I'm <span id="yourNameInline">vinotha</span></h2>
+
+        <p>I'm a student building things on the web. I love creating small apps, visual designs and learning new libraries.</p>
+
+        <div class="cta">
+
+          <button class="btn btn-primary" id="contactMe">Contact Me</button>
+
+          <button class="btn btn-ghost" id="viewProjects">View Projects</button>
+
+        </div>
+
+        <div style="margin-top:14px" class="stats">
+
+          <div class="stat"><b id="projCount">6</b><span class="muted">Projects</span></div>
+
+          <div class="stat"><b id="years">2</b><span class="muted">Experience</span></div>
+
+        </div>
+
+      </div>
+
+      <aside style="background:var(--card);padding:18px;border-radius:12px">
+
+        <h4 style="margin:0 0 10px 0">Quick info</h4>
+
+        <p class="muted" style="margin:0 0 12px 0">Creating Codes for fun • Available remotely • Stay in Pondicherry</p>
+
+        <div style="display:flex;gap:8px;flex-direction:column">
+
+          <div class="pill">Email: <button id="copyEmail" class="btn btn-ghost" style="padding:6px">copy</button></div>
+
+          <div class="pill">Phone: +91-7200760529</div>
+
+          <div class="pill">Graduation: 2026</div>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+    <section id="projects" class="section">
+
+      <h3>Projects</h3>
+
+      <div class="filters" role="tablist" aria-label="Filter projects">
+
+        <button class="btn btn-ghost filter" data-filter="all">All</button>
+
+        <button class="btn btn-ghost filter" data-filter="web">Web</button>
+
+        <button class="btn btn-ghost filter" data-filter="design">Design</button>
+
+        <button class="btn btn-ghost filter" data-filter="game">Game</button>
+
+      </div>
+
+      <div class="grid" id="projectGrid"></div>
+
+    </section>
+
+    <section class="section">
+
+      <h3>Skills & Education</h3>
+
+      <div class="two-cols">
+
+        <div>
+
+          <h4>Skills</h4>
+
+          <div class="skill"><span>HTML & CSS</span><div class="bar" aria-hidden><i style="width:95%"></i></div></div>
+
+          <div class="skill"><span>JavaScript</span><div class="bar" aria-hidden><i style="width:82%"></i></div></div>
+
+          <h4 style="margin-top:12px">Education</h4>
+
+          <p class="muted">BSC - computerscience — 2024 — Present</p>
+
+        </div>
+
+        <aside style="background:var(--card);padding:12px;border-radius:12px">
+
+          <h4>Contact</h4>
+
+          <form id="contactForm">
+
+            <input id="name" type="text" placeholder="Your name" required />
+
+            <input id="email" type="email" placeholder="Your email" required />
+
+            <textarea id="message" placeholder="Message" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+
+            <p id="formFeedback" class="muted" style="margin:6px 0 0 0"></p>
+
+          </form>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <footer>
+
+      <small>Made with HTML, CSS AND JS • <span id="year"></span> • <span class="muted">Done by Me</span></small>
+
+    </footer>
+
+  </main>
+
+  <div id="modalBg" class="modal-bg" role="dialog" aria-modal="true" aria-hidden="true">
+
+    <div class="modal" id="modal">
+
+      <button id="closeModal" class="btn btn-ghost" style="float:right">Close</button>
+
+      <div id="modalContent"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
